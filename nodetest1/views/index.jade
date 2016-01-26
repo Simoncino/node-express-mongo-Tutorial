@@ -1,0 +1,11 @@
+extends layout
+
+block content
+
+    h1.
+        User List
+    ul
+        each user, i in cose
+            li
+                a(href="mailto:#{user.email}")= user.nome+" "+user.cognome
+    a(href="newuser") "Nuovo user"
